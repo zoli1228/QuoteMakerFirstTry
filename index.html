@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote Maker</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body onload="displayHome()">
+
+  <h1 class="display-3 text-center dark-bg">Villanyszerelési segéd</h1>
+
+  
+    <div id="root" class="row no-gutters text-center">
+      <div id="homepage" class="col">
+        <!-- CARD START -->
+        <div id="materialscard" class="card text-white bg-primary mb-3 margin-20px" style="max-width: 18rem;">
+          <div class="card-header">Anyaglista</div>
+          <div class="card-body">
+            <h5 class="card-title">Alapszerelés</h5>
+            <p class="card-text">Villanyszerelési anyagok, MÜ csövek, Habarcs anyagok, dobozok stb...</p>
+          </div>
+        </div>
+        <!-- CARD START -->
+        <div class="card text-white bg-primary mb-3 margin-20px" style="max-width: 18rem;">
+          <div class="card-header">Szerelvények</div>
+          <div class="card-body">
+            <h5 class="card-title">Kapcsolók, dugaljak, stb...</h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+        <!-- CARD START -->
+        <div class="card text-white bg-primary mb-3 margin-20px" style="max-width: 18rem;">
+          <div class="card-header">Kalkulátor</div>
+          <div class="card-body">
+            <h5 class="card-title">Munka és anyag számláló</h5>
+            <p class="card-text">Az elvégzendő munkák és a szükséges anyag összeírása után kiszámolja a munkadíjat.</p>
+          </div>
+        </div>
+        <!-- CARD START -->
+        <div class="card text-white bg-primary mb-3 margin-20px" style="max-width: 18rem;">
+          <div class="card-header">Számla készítő</div>
+          <div class="card-body">
+            <h5 class="card-title">Számlázó program</h5>
+            <p class="card-text">Számlák készítése nyomtatóbarát kivitelben.</p>
+          </div>
+        </div>
+
+      </div>
+    <div id="materialspage" class="col">
+      <button type="button" class="backhome btn btn-primary margin-20px">Kezdőoldal</button>
+      <h1>Ez az anyaglista oldal.</h1>
+      <h2 class="display-6">Ide kerülnek majd a villanyszerelési anyagok.</h2>
+    </div>
+
+    <div id="operator" class="col text-center separate" style="display: none">
+      <h1 class="display-6 margin-20px">Jelenlegi munkafolyamat összesítő modul.</h1>
+      <h3 class="display-6 margin-20px">Ezen az interaktív menün található majd a jelenlegi munka összesítése.</h3>
+      <h5 class="display-6 margin-20px">Nyomtatási nézet, véglegesítés gomb, árkalkuláció, szorzó, stb.</h5>
+    </div>
+
+
+  </homepage>
+  <a id="slidemenu" href="#" class="">&#8680;</a>
+  <footer>Villanyszerelési segéd-szoftver v0.0.1 - Szöllősi Zoltán - sz.zoltan091@gmail.com</footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
