@@ -5,13 +5,24 @@ let materialsPage = document.querySelector("#materialspage");
 let materialsCard = document.querySelector("#materialscard");
 let homeButton = document.querySelector(".backhome");
 let root = document.querySelector("#root");
+let winWidth;
+
+window.addEventListener("resize", () => {
+    winWidth = window.innerWidth;
+})
+    
+
 
 slideMenuButton.addEventListener("click", () => {
 
     if(operatorMenu.style.display == "none") {
         slideMenuButton.setAttribute("class", "flip180");
         operatorMenu.style.display = "block";
-        root.setAttribute("class", "row no-gutters")
+        if(winWidth > 640) {
+        root.setAttribute("class", "row no-gutters");
+        } else {
+            root.setAttribute("class", "row no-gutters text-center");
+        }
     }
     else {
         slideMenuButton.setAttribute("class", "");

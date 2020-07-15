@@ -6,11 +6,91 @@ html body {
     margin: 10px;
 }
 
+
+@media screen and (max-width: 640px) {
 .dark-bg {
     background-color: rgb(23, 96, 190);   
     color: white;
     text-shadow: 0 0 3px black;
     -moz-user-select: none;
+    font-size: 16px !important;
+}
+
+#slidemenu {
+    
+  scale: -1 1;
+  font-weight: 900;
+  position: fixed;
+  bottom: 80px;
+  right: 1vw;
+  background: rgb(23, 96, 190);
+  font-size: 32px;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px #00000088;
+  text-decoration: none;
+  transition: 50ms all;
+  transform-origin: center;
+  transform: rotateZ(-90deg);
+  
+}
+
+.flip180 {
+  transform: rotateZ(90deg) !important; 
+}
+
+.card {
+  display: inline-grid !important;
+  box-shadow: 4px 4px 5px #00000088;
+  transition: cubic-bezier(0.23, 0.55, 0.23, 1) 100ms;
+  width: 16rem !important;
+  height: auto !important;  
+  transform-origin: top;
+  font-size: 12px !important;
+}
+
+.card-header {
+  height: auto !important;
+  font-size: 16px !important;
+}
+
+.card-body {
+  font-size: 14px;
+}
+
+.card-text {
+  font-size: 12px;
+}
+
+footer {
+  margin: 20px;
+  position: relative !important;
+  font-size: 70%;
+  text-align: center;
+  bottom: 10px;
+  right: 10px;
+}
+
+.separate {
+  min-height: 80vh;
+  margin-top: -8px;
+  display: block;
+  border: none !important;
+  background-color: rgb(240, 240, 240);
+}
+
+/* END OF MOBILE VIEW */
+}
+
+.dark-bg {
+  background-color: rgb(23, 96, 190);   
+  color: white;
+  text-shadow: 0 0 3px black;
+  -moz-user-select: none;
 }
 
 .card {
