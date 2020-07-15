@@ -1,5 +1,6 @@
 html body {
     background: rgb(221, 221, 221);
+    overflow-x: hidden;
 }
 
 .margin-20px {
@@ -69,7 +70,7 @@ html body {
 }
 
 .card:hover {
-    
+  
   scale:105%;
   z-index: none !important;
   box-shadow: 4px 4px 5px #00000088 !important;
@@ -81,6 +82,7 @@ html body {
 }
 
 .card:active {
+  
   scale:103%;
   z-index: none !important;
   box-shadow: 4px 4px 5px #00000088 !important;
@@ -89,35 +91,35 @@ html body {
 
 }
 
-footer {
-  margin: 20px;
-  position: relative !important;
-  font-size: 70%;
-  text-align: center;
-  bottom: 10px;
-  right: 10px;
-}
 
 .separate {
   min-height: 50vh !important;
   height: 50vh !important;
   margin-top: -8px;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
   display: block;
-  border: none !important;
+  border-top: 2px solid black !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
   background-color: rgb(240, 240, 240);
   position: fixed !important;
   z-index: 20 !important;
   bottom: 0;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .placeholder {
-  min-height: 170vh !important;
-  display: block;
+  display: inline-block;
+  height: 140vh !important;
+  
 }
 
 /* END OF MOBILE VIEW */
 }
+
+@media screen and (min-width: 640px) {
 
 .dark-bg {
   background-color: rgb(23, 96, 190);   
@@ -138,9 +140,10 @@ footer {
 
 .card:hover {
     
+  -moz-transform: scale(4);
     scale:105%;
     z-index: 10;
-    box-shadow: 10px 60px 10px #00000066;
+    box-shadow: 10px 60px 20px #00000066;
     cursor: pointer;
     transform: perspective(30cm) rotateX(-15deg);
         -webkit-animation: vibrate-3 10s cubic-bezier(0.445, 0.050, 0.550, 0.950) infinite alternate both;
@@ -149,9 +152,10 @@ footer {
 }
 
 .card:active {
+    
     scale:103%;
     z-index: 10;
-    box-shadow: 30px 130px 35px #00000066;
+    box-shadow: 8px  50px 15px #00000066;
     cursor: pointer;
     background-color: rgb(159, 159, 187) !important;
     transition: all 10ms;
@@ -281,11 +285,6 @@ footer {
 }
 
 
-footer {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
 
 #slidemenu {
     
@@ -322,3 +321,4 @@ footer {
 
 }
 
+}
