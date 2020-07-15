@@ -5,6 +5,7 @@ let materialsPage = document.querySelector("#materialspage");
 let materialsCard = document.querySelector("#materialscard");
 let homeButton = document.querySelector(".backhome");
 let root = document.querySelector("#root");
+let placeHolderDiv = document.querySelector(".placeholder");
 let winWidth;
 
 window.addEventListener("resize", () => {
@@ -22,12 +23,14 @@ slideMenuButton.addEventListener("click", () => {
         root.setAttribute("class", "row no-gutters");
         } else {
             root.setAttribute("class", "row no-gutters text-center");
+            placeHolderDiv.style.display = "block";
         }
     }
     else {
         slideMenuButton.setAttribute("class", "");
         operatorMenu.style.display = "none";
         root.setAttribute("class", "row no-gutters text-center");
+        placeHolderDiv.style.display = "none";
     }
 })
 

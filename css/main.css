@@ -36,6 +36,7 @@ html body {
   transition: 50ms all;
   transform-origin: center;
   transform: rotateZ(-90deg);
+  z-index: 21 !important;
   
 }
 
@@ -70,24 +71,22 @@ html body {
 .card:hover {
     
   scale:105%;
-  z-index: 10;
+  z-index: none !important;
   box-shadow: 4px 4px 5px #00000088 !important;
   cursor: pointer;
   transform: none;
-  -webkit-animation: none;
-  animation: none;
+  -webkit-animation: none !important;
+  animation: none !important;
   
 }
 
 .card:active {
   scale:103%;
-  z-index: 10;
+  z-index: none !important;
   box-shadow: 4px 4px 5px #00000088 !important;
   cursor: pointer;
   transform: none;
-  -webkit-animation: none;
-  animation: none;
-  
+
 }
 
 footer {
@@ -100,11 +99,21 @@ footer {
 }
 
 .separate {
-  min-height: 80vh;
+  min-height: 50vh !important;
+  height: 50vh !important;
   margin-top: -8px;
   display: block;
   border: none !important;
   background-color: rgb(240, 240, 240);
+  position: fixed !important;
+  z-index: 20 !important;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.placeholder {
+  min-height: 65rem !important;
+  display: block;
 }
 
 /* END OF MOBILE VIEW */
