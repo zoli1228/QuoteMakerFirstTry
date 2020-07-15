@@ -51,6 +51,7 @@ html body {
   height: auto !important;  
   transform-origin: top;
   font-size: 12px !important;
+  transition: none !important;
 }
 
 .card-header {
@@ -64,6 +65,29 @@ html body {
 
 .card-text {
   font-size: 12px;
+}
+
+.card:hover {
+    
+  scale:105%;
+  z-index: 10;
+  box-shadow: 4px 4px 5px #00000088 !important;
+  cursor: pointer;
+  transform: none;
+  -webkit-animation: none;
+  animation: none;
+  
+}
+
+.card:active {
+  scale:103%;
+  z-index: 10;
+  box-shadow: 4px 4px 5px #00000088 !important;
+  cursor: pointer;
+  transform: none;
+  -webkit-animation: none;
+  animation: none;
+  
 }
 
 footer {
