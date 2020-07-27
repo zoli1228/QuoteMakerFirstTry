@@ -6,7 +6,7 @@ let materialsCard = document.querySelector("#materialscard");
 let homeButton = document.querySelector(".backhome");
 let root = document.querySelector("#root");
 let placeHolderDiv = document.querySelector(".placeholder");
-let winWidth;
+let winWidth = 1080;
 
 window.addEventListener("resize", () => {
     winWidth = window.innerWidth;
@@ -17,17 +17,19 @@ window.addEventListener("resize", () => {
 slideMenuButton.addEventListener("click", () => {
 
     if(operatorMenu.style.display == "none") {
-        slideMenuButton.setAttribute("class", "flip180");
+
+        slideMenuButton.innerHTML = "Segédpanel elrejtése"
         operatorMenu.style.display = "block";
-        if(winWidth > 640) {
-        root.setAttribute("class", "row no-gutters");
+        if(winWidth >= 640) {
+        root.setAttribute("class", "row no-gutters text-left");
         } else {
             root.setAttribute("class", "row no-gutters text-center");
             placeHolderDiv.style.display = "block";
         }
     }
     else {
-        slideMenuButton.setAttribute("class", "");
+
+        slideMenuButton.innerHTML = "Segédpanel megnyitása"
         operatorMenu.style.display = "none";
         root.setAttribute("class", "row no-gutters text-center");
         placeHolderDiv.style.display = "none";

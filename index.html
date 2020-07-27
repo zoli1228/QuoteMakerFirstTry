@@ -4,26 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quote Maker</title>
-  <link rel="stylesheet" href="css/main.css">
+  <title>Quote Maker</title> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body onload="displayHome()">
+<body>
 
   <h1 class="display-3 text-center dark-bg">Villanyszerelési segéd</h1>
 
 
   <div id="root" class="row no-gutters text-center">
-    <div id="homepage" class="col-md mb-auto">
+    <div id="homepage" class="col-md mb-auto" style="display: block">
       <!-- CARD START -->
-      <div id="materialscard" class="card text-white bg-primary mb-3 margin-20px" style="max-width: 18rem;">
-        <div class="card-header">Anyaglista</div>
-        <div class="card-body">
-          <h5 class="card-title">Alapszerelés</h5>
-          <p class="card-text">Villanyszerelési anyagok, MÜ csövek, Habarcs anyagok, dobozok stb...</p>
-        </div>
+      
+        <div id="materialscard" class="text-white bg-primary mb-3 margin-20px card" style="max-width: 18rem;">
+          <div class="card-header">Anyaglista</div>
+          <div class="card-body">
+            <h5 class="card-title">Alapszerelés</h5>
+            <p class="card-text">Villanyszerelési anyagok, MÜ csövek, Habarcs anyagok, dobozok stb...</p>
+          </div>
+       
+
+
       </div>
       <!-- CARD START -->
       <div class="card text-white bg-primary mb-3 margin-20px" style="max-width: 18rem;">
@@ -51,7 +55,7 @@
       </div>
 
     </div>
-    <div id="materialspage" class="col-md mb-auto">
+    <div id="materialspage" class="col-md mb-auto" style="display:none">
       <button type="button" class="backhome btn btn-primary margin-20px">Kezdőoldal</button>
       <h1>Ez az anyaglista oldal.</h1>
       <h2 class="display-6">Ide kerülnek majd a villanyszerelési anyagok.</h2>
@@ -80,7 +84,7 @@
 
 
 
-    <a id="slidemenu" href="#" class="">&#8680;</a>
+    <a id="slidemenu" href="#">Segédpanel megnyitása</a>
 
 
     
@@ -88,8 +92,8 @@
     <script src="js/main.js"></script>
   </div>
 </body>
-<footer class="footer">
+<!-- <footer class="footer">
   <div class="text-muted text-center">Villanyszerelési segéd-szoftver v0.0.1 - Szöllősi Zoltán - sz.zoltan091@gmail.com</div>
 
-</footer>
+</footer> -->
 </html>
