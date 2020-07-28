@@ -86,7 +86,7 @@ slideMenuButton.addEventListener("click", () => {
 materialsCard.addEventListener("click", displayMaterials);
 calculatorCard.addEventListener("click", displayCalculator);
 accessoriesCard.addEventListener("click", displayAccessories);
-invoiceCard.addEventListener("click", displayMaterials);
+invoiceCard.addEventListener("click", displayInvoicePage);
 
 
 
