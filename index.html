@@ -22,6 +22,8 @@
 
 
   <div id="root" class="row no-gutters text-center">
+    <button type="button" class="backhome btn btn-primary margin-20px">Kezdőoldal</button>
+
     <div id="homepage" class="col-md mb-auto" style="display: block">
       <!-- CARD START -->
       
@@ -36,7 +38,7 @@
 
       </div>
       <!-- CARD START -->
-      <div class="card text-white bg-primary mb-3 margin-20px" style="max-width: 18rem;">
+      <div id="accessoriesCard" class="card text-white bg-primary mb-3 margin-20px" style="max-width: 18rem;">
         <div class="card-header">Szerelvények</div>
         <div class="card-body">
           <h5 class="card-title">Kapcsolók, dugaljak, stb...</h5>
@@ -44,7 +46,7 @@
         </div>
       </div>
       <!-- CARD START -->
-      <div class="card text-white bg-primary mb-3 margin-20px" style="max-width: 18rem;">
+      <div id="calculatorCard" class="card text-white bg-primary mb-3 margin-20px" style="max-width: 18rem;">
         <div class="card-header">Kalkulátor</div>
         <div class="card-body">
           <h5 class="card-title">Munka és anyag számláló</h5>
@@ -52,7 +54,7 @@
         </div>
       </div>
       <!-- CARD START -->
-      <div class="card text-white bg-primary mb-3 margin-20px" style="max-width: 18rem;">
+      <div id="invoiceCard" class="card text-white bg-primary mb-3 margin-20px" style="max-width: 18rem;">
         <div class="card-header">Számla készítő</div>
         <div class="card-body">
           <h5 class="card-title">Számlázó program</h5>
@@ -62,9 +64,27 @@
 
     </div>
     <div id="materialspage" class="col-md mb-auto" style="display:none">
-      <button type="button" class="backhome btn btn-primary margin-20px">Kezdőoldal</button>
+      
       <h1>Ez az anyaglista oldal.</h1>
       <h2 class="display-6">Ide kerülnek majd a villanyszerelési anyagok.</h2>
+    </div>
+
+    <div id="calculatorpage" class="col-md mb-auto" style="display:none">
+      
+      <h1>Ez a kalkulátor oldal.</h1>
+      <h2 class="display-6">Ide kerül majd egy számolási program.</h2>
+    </div>
+
+    <div id="accessoriespage" class="col-md mb-auto" style="display:none">
+      
+      <h1>Ez a szerelvények oldala.</h1>
+      <h2 class="display-6">Ide kerül majd egy lista rendszer a kiválasztható szerelvényekről.</h2>
+    </div>
+
+    <div id="invoicepage" class="col-md mb-auto" style="display:none">
+      
+      <h1>Ez a számlázási oldal.</h1>
+      <h2 class="display-6">Itt jelennek meg majd a számlakészítéshez szükséges elemek.</h2>
     </div>
 
     <div id="operator" class="col-md mb-auto text-center separate" style="display: none">

@@ -3,15 +3,21 @@ let slideMenuButton = document.querySelector("#slidemenu");
 let slideMenuText = document.querySelector("#slidemenuText");
 let operatorMenu = document.querySelector("#operator");
 let homePage = document.querySelector("#homepage");
+let calcPage = document.querySelector("#calculatorpage");
+let accessoriesPage = document.querySelector("#accessoriespage");
+let invoicePage = document.querySelector("#invoicepage");
 let materialsPage = document.querySelector("#materialspage");
 let materialsCard = document.querySelector("#materialscard");
+let accessoriesCard = document.querySelector("#accessoriesCard");
+let calculatorCard = document.querySelector("#calculatorCard");
+let invoiceCard = document.querySelector("#invoiceCard");
 let homeButton = document.querySelector(".backhome");
 let root = document.querySelector("#root");
 let placeHolderDiv = document.querySelector(".placeholder");
 let menuClosedButton = document.querySelector("#mclosedbtn");
 let menuOpenButton = document.querySelector("#mopenbtn");
 let winWidth = window.innerWidth;
-let isOperatorOpen = false;
+let isOperatorOpen;
 let windowMode;
 
 window.addEventListener("resize", () => {
@@ -23,7 +29,7 @@ let checkDeviceWidth = () => {
     winWidth < 640 ? windowMode = "mobile" : windowMode = "pc";
     if (windowMode == "mobile") {
         slideMenuText.innerHTML = "";
-
+        menuClosedButton.style.display = "block";
         switch (isOperatorOpen) {
             case true:
 
@@ -77,9 +83,16 @@ slideMenuButton.addEventListener("click", () => {
     checkDeviceWidth();
 })
 
-materialsCard.addEventListener("click", displayMaterials)
+materialsCard.addEventListener("click", displayMaterials);
+calculatorCard.addEventListener("click", displayCalculator);
+accessoriesCard.addEventListener("click", displayAccessories);
+invoiceCard.addEventListener("click", displayMaterials);
 
-homeButton.addEventListener("click", displayHome)
+
+
+homeButton.addEventListener("click", displayHome);
+
+
 
 
 
@@ -87,14 +100,51 @@ homeButton.addEventListener("click", displayHome)
 function displayHome() {
     homePage.style.display = "block";
     materialsPage.style.display = "none";
+    accessoriesPage.style.display ="none";
+    calcPage.style.display = "none";
+    invoicePage.style.display = "none";
+    hideHomeBtn(true);
 }
 function displayMaterials() {
     homePage.style.display = "none";
     materialsPage.style.display = "block";
+    accessoriesPage.style.display ="none";
+    calcPage.style.display = "none";
+    invoicePage.style.display = "none";
+    hideHomeBtn(false);
+}
+function displayCalculator() {
+    homePage.style.display = "none";
+    materialsPage.style.display = "none";
+    accessoriesPage.style.display ="none";
+    calcPage.style.display = "block";
+    invoicePage.style.display = "none";
+    hideHomeBtn(false);
+}
+function displayAccessories() {
+    homePage.style.display = "none";
+    materialsPage.style.display = "none";
+    accessoriesPage.style.display ="block";
+    calcPage.style.display = "none";
+    invoicePage.style.display = "none";
+    hideHomeBtn(false);
+}
+function displayInvoicePage() {
+    homePage.style.display = "none";
+    materialsPage.style.display = "none";
+    accessoriesPage.style.display ="none";
+    calcPage.style.display = "none";
+    invoicePage.style.display = "block";
+    hideHomeBtn(false);
 }
 
-mainBody.addEventListener("load", () => {
-    checkDeviceWidth();
-    displayHome();
-})
+mainBody.addEventListener("load",
+    checkDeviceWidth(),
+    displayHome()
+)
+
+function hideHomeBtn(bool) {
+    bool == true ? homeButton.style.display = "none" : homeButton.style.display = "block";
+    return;
+}
 
