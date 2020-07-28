@@ -36,14 +36,17 @@ html body {
   text-decoration: none;
   transition: 50ms all;
   transform-origin: center;
-  transform: rotateZ(-90deg); transform: scale(-1, 1);
+  transform: rotateZ(-90deg); transform: scale(1, 1);
+  overflow: hidden;
   
   z-index: 21 ;
   
 }
 
-.flip180 {
-  transform: rotateZ(90deg) ; 
+#mclosedbtn, #mopenbtn {
+  width: inherit;
+  padding: 10%;
+  
 }
 
 .card {
@@ -118,7 +121,7 @@ html body {
 }
 
 
-
+@media screen and (min-width: 641px) {
 .dark-bg {
   background-color: rgb(23, 96, 190);
   padding: 2vh;   
@@ -210,4 +213,5 @@ html body {
   background: white;
   box-shadow: 0 0 15px white;
   color: grey;
+}
 }

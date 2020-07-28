@@ -1,4 +1,6 @@
+let mainBody = document.querySelector("body");
 let slideMenuButton = document.querySelector("#slidemenu");
+let slideMenuText = document.querySelector("#slidemenuText");
 let operatorMenu = document.querySelector("#operator");
 let homePage = document.querySelector("#homepage");
 let materialsPage = document.querySelector("#materialspage");
@@ -6,34 +8,71 @@ let materialsCard = document.querySelector("#materialscard");
 let homeButton = document.querySelector(".backhome");
 let root = document.querySelector("#root");
 let placeHolderDiv = document.querySelector(".placeholder");
-let winWidth = 1080;
+let menuClosedButton = document.querySelector("#mclosedbtn");
+let menuOpenButton = document.querySelector("#mopenbtn");
+let winWidth = window.innerWidth;
+let isOperatorOpen = false;
+let windowMode;
 
 window.addEventListener("resize", () => {
     winWidth = window.innerWidth;
+    checkDeviceWidth();
 })
-    
 
+let checkDeviceWidth = () => {
+    winWidth < 640 ? windowMode = "mobile" : windowMode = "pc";
+    if (windowMode == "mobile") {
+        slideMenuText.innerHTML = "";
+
+        switch (isOperatorOpen) {
+            case true:
+                
+                menuOpenButton.style.display = "block";
+                menuClosedButton.style.display = "none";
+
+                break;
+            case false:
+                
+                menuOpenButton.style.display = "none"
+                menuClosedButton.style.display = "block";
+                break;
+        }
+
+
+    }
+    else if (windowMode == "pc") {
+        menuOpenButton.style.display = "none";
+        menuClosedButton.style.display = "none";
+        switch (isOperatorOpen) {
+            case true:
+                slideMenuText.innerHTML = "Operátor elrejtése";
+                break;
+            case false:
+                slideMenuText.innerHTML = "Operátor kinyitása";
+                break;
+        }
+    }
+}
 
 slideMenuButton.addEventListener("click", () => {
 
-    if(operatorMenu.style.display == "none") {
-
-        slideMenuButton.innerHTML = "Segédpanel elrejtése"
+    if (!isOperatorOpen) {
+        isOperatorOpen = true;
         operatorMenu.style.display = "block";
-        if(winWidth >= 640) {
-        root.setAttribute("class", "row no-gutters text-left");
-        } else {
-            root.setAttribute("class", "row no-gutters text-center");
+        placeHolderDiv.style.display = "none";
+        if (windowMode == "pc") {
+            root.setAttribute("class", "row no-gutters text-left");
+        } else if (windowMode == "mobile") {
             placeHolderDiv.style.display = "block";
         }
     }
-    else {
-
-        slideMenuButton.innerHTML = "Segédpanel megnyitása"
+    else if (isOperatorOpen) {
+        isOperatorOpen = false;
         operatorMenu.style.display = "none";
         root.setAttribute("class", "row no-gutters text-center");
         placeHolderDiv.style.display = "none";
     }
+    checkDeviceWidth();
 })
 
 materialsCard.addEventListener("click", displayMaterials)
@@ -51,3 +90,9 @@ function displayMaterials() {
     homePage.style.display = "none";
     materialsPage.style.display = "block";
 }
+
+mainBody.addEventListener("load", () => {
+    checkDeviceWidth();
+    displayHome();
+})
+
