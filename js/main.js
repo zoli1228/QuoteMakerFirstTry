@@ -26,13 +26,13 @@ let checkDeviceWidth = () => {
 
         switch (isOperatorOpen) {
             case true:
-                
+
                 menuOpenButton.style.display = "block";
                 menuClosedButton.style.display = "none";
 
                 break;
             case false:
-                
+
                 menuOpenButton.style.display = "none"
                 menuClosedButton.style.display = "block";
                 break;
@@ -46,9 +46,11 @@ let checkDeviceWidth = () => {
         switch (isOperatorOpen) {
             case true:
                 slideMenuText.innerHTML = "Operátor elrejtése";
+                root.setAttribute("class", "row no-gutters text-left");
                 break;
             case false:
                 slideMenuText.innerHTML = "Operátor kinyitása";
+                root.setAttribute("class", "row no-gutters text-center");
                 break;
         }
     }
@@ -61,7 +63,7 @@ slideMenuButton.addEventListener("click", () => {
         operatorMenu.style.display = "block";
         placeHolderDiv.style.display = "none";
         if (windowMode == "pc") {
-            root.setAttribute("class", "row no-gutters text-left");
+            
         } else if (windowMode == "mobile") {
             placeHolderDiv.style.display = "block";
         }
@@ -69,7 +71,7 @@ slideMenuButton.addEventListener("click", () => {
     else if (isOperatorOpen) {
         isOperatorOpen = false;
         operatorMenu.style.display = "none";
-        root.setAttribute("class", "row no-gutters text-center");
+        
         placeHolderDiv.style.display = "none";
     }
     checkDeviceWidth();
