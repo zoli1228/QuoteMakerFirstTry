@@ -1,25 +1,3 @@
-let mainBody = document.querySelector("body");
-let slideMenuButton = document.querySelector("#slidemenu");
-let slideMenuText = document.querySelector("#slidemenuText");
-let operatorMenu = document.querySelector("#operator");
-let homePage = document.querySelector("#homepage");
-let calcPage = document.querySelector("#calculatorpage");
-let accessoriesPage = document.querySelector("#accessoriespage");
-let invoicePage = document.querySelector("#invoicepage");
-let materialsPage = document.querySelector("#materialspage");
-let materialsCard = document.querySelector("#materialscard");
-let accessoriesCard = document.querySelector("#accessoriesCard");
-let calculatorCard = document.querySelector("#calculatorCard");
-let invoiceCard = document.querySelector("#invoiceCard");
-let homeButton = document.querySelector(".backhome");
-let root = document.querySelector("#root");
-let placeHolderDiv = document.querySelector(".placeholder");
-let menuClosedButton = document.querySelector("#mclosedbtn");
-let menuOpenButton = document.querySelector("#mopenbtn");
-let winWidth = window.innerWidth;
-let isOperatorOpen;
-let windowMode;
-
 window.addEventListener("resize", () => {
     winWidth = window.innerWidth;
     checkDeviceWidth();
@@ -55,7 +33,7 @@ let checkDeviceWidth = () => {
                 root.setAttribute("class", "row no-gutters text-left");
                 break;
             case false:
-                slideMenuText.innerHTML = "Operátor kinyitása";
+                slideMenuText.innerHTML = "Operátor megnyitása";
                 root.setAttribute("class", "row no-gutters text-center");
                 break;
         }
@@ -84,7 +62,7 @@ slideMenuButton.addEventListener("click", () => {
 })
 
 materialsCard.addEventListener("click", displayMaterials);
-calculatorCard.addEventListener("click", displayCalculator);
+contactsCard.addEventListener("click", displayCalculator);
 accessoriesCard.addEventListener("click", displayAccessories);
 invoiceCard.addEventListener("click", displayInvoicePage); /*?*/
 
@@ -142,6 +120,8 @@ mainBody.addEventListener("load",
     checkDeviceWidth(),
     displayHome()
 )
+
+
 
 function hideHomeBtn(bool) {
     bool == true ? homeButton.style.display = "none" : homeButton.style.display = "block";

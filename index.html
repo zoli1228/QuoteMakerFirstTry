@@ -12,10 +12,17 @@
 
 <body>
 
-  <h1 class="display-3 text-center dark-bg">Villanyszerelési segéd</h1>
-  
+  <h2 class="display-6 text-center dark-bg">Villanyszerelési segéd</h2>
+  <label class="currentWorkText">Jelenlegi munkafolyamat:</label>
+  <select id="clientsDropdown">
+    <option value="Rodrigo1">Rodrigo1</option>
+    <option value="Rodrigo2">Rodrigo2</option>
+    <option value="Rodrigo3">Rodrigo3</option>
+    <option value="Rodrigo4">Rodrigo4</option>
+
+  </select>
     <a id="slidemenu" href="#">
-      <span id="slidemenuText">Operátor kinyitása</span>
+      <span id="slidemenuText">Operátor megnyitása</span>
     <img id="mclosedbtn" src="https://freeiconshop.com/wp-content/uploads/edd/menu-rounded-solid.png" alt="menu_closed_btn" style="display: none;">
     <img id="mopenbtn" src="https://cdn.iconscout.com/icon/free/png-256/keyboard-down-arrow-1780093-1518654.png" alt="menu_open_btn" style="display: none;">
   </a>
@@ -27,11 +34,11 @@
     <div id="homepage" class="col-md mb-auto" style="display: block">
       <!-- CARD START -->
       
-        <div id="materialscard" class="text-white bg-primary mb-3 margin-20px card" style="max-width: 18rem;">
-          <div class="card-header">Anyaglista</div>
+        <div id="quotecard" class="text-white bg-primary mb-3 margin-20px card" style="max-width: 18rem;">
+          <div class="card-header">Árajánlatok</div>
           <div class="card-body">
-            <h5 class="card-title">Alapszerelés</h5>
-            <p class="card-text">Villanyszerelési anyagok, MÜ csövek, Habarcs anyagok, dobozok stb...</p>
+            <h5 class="card-title">Árajánlatok kezelése</h5>
+            <p class="card-text">Tárolt árajánlatok megnézése, módosítása, valamint új árajánlat készítése.</p>
           </div>
        
 
@@ -46,11 +53,11 @@
         </div>
       </div>
       <!-- CARD START -->
-      <div id="calculatorCard" class="card text-white bg-primary mb-3 margin-20px" style="max-width: 18rem;">
-        <div class="card-header">Kalkulátor</div>
+      <div id="contactsCard" class="card text-white bg-primary mb-3 margin-20px" style="max-width: 18rem;">
+        <div class="card-header">Kapcsolatok</div>
         <div class="card-body">
-          <h5 class="card-title">Munka és anyag számláló</h5>
-          <p class="card-text">Az elvégzendő munkák és a szükséges anyag összeírása után kiszámolja a munkadíjat.</p>
+          <h5 class="card-title">Megrendelők adatai</h5>
+          <p class="card-text">Nevek, telefonszámok, egyenleg, egyéb adatok...</p>
         </div>
       </div>
       <!-- CARD START -->
@@ -63,16 +70,17 @@
       </div>
 
     </div>
-    <div id="materialspage" class="col-md mb-auto" style="display:none">
+    <div id="quotepage" class="col-md mb-auto" style="display:none">
       
-      <h1>Ez az anyaglista oldal.</h1>
-      <h2 class="display-6">Ide kerülnek majd a villanyszerelési anyagok.</h2>
+      <h1>Ez az árajánlatok oldal.</h1>
+      <h2 class="display-6">Itt lehet majd kezelni régi és új árajánlatokat.</h2>
     </div>
 
-    <div id="calculatorpage" class="col-md mb-auto" style="display:none">
+    <div id="contactspage" class="col-md mb-auto" style="display:none">
       
-      <h1>Ez a kalkulátor oldal.</h1>
-      <h2 class="display-6">Ide kerül majd egy számolási program.</h2>
+      <h1>Ez a kapcsolatok oldal.</h1>
+
+      
     </div>
 
     <div id="accessoriespage" class="col-md mb-auto" style="display:none">
@@ -117,6 +125,7 @@
     
     
   </div>
+  <script src="js/variables.js"></script>
   <script src="js/main.js"></script>
 </body>
 <!-- <footer class="footer">

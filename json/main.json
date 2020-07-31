@@ -1,0 +1,17 @@
+{
+    "clients": [
+        {
+            "id" : 1,
+            "firstname" : "Rodrigo",
+            "lastname" : "Kalányos", 
+            "address" : "2730 Albertirsa, Bori Jenő utca 27", 
+            "phone" : "06301112233", 
+            "jobtitle" : ["Gyerekszoba világítás", "Eperfa ültetés", "Nappali átvezetékelés"],
+            "quote" : 512312,
+            "paid" : 230000
+        }
+    ]
+
+
+
+}
